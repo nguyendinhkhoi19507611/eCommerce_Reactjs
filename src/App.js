@@ -1,6 +1,6 @@
 import React, { Component, Fragment, useEffect, useState } from 'react';
 import { ToastContainer } from 'react-toastify';
-
+import Header from './container/Header/Header';
 import Footer from './container/Footer/Footer';
 
 import {
@@ -17,7 +17,8 @@ function App() {
       <Switch>
         <div className="App">
           <Route exact path="/">
-           
+            <Header />
+            
             <Footer />
           </Route>
           <ToastContainer
