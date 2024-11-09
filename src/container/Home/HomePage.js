@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 function HomePage(props) {
     const [dataProductFeature, setDataProductFeature] = useState([])
     const [dataNewProductFeature, setNewProductFeature] = useState([])
-    const [dataNewBlog, setdataNewBlog] = useState([]) 
+    const [dataNewBlog, setdataNewBlog] = useState([])
     const [dataBanner, setdataBanner] = useState([])
     const [dataProductRecommend, setdataProductRecommend] = useState([])
     let settings = {
@@ -24,7 +24,7 @@ function HomePage(props) {
         autoplay: true,
         cssEase: "linear"
     }
- 
+
     useEffect(() => {
         const userData = JSON.parse(localStorage.getItem('userData'));
         if (userData) {

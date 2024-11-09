@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useFetchAllcode } from '../../container/customize/fetch';
 import { getAllCodeService } from '../../services/userService';
 function Category(props) {
 
