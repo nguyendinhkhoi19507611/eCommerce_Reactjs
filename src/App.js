@@ -6,6 +6,7 @@ import Footer from './container/Footer/Footer';
 import HomePage from './container/Home/HomePage';
 import ShopPage from './container/Shop/ShopPage';
 import DetailProductPage from './container/DetailProduct/DetailProductPage';
+import HomePageAdmin from './container/System/HomePageAdmin';
 import {
   BrowserRouter as Router,
   Switch,
@@ -33,6 +34,13 @@ function App() {
             <Header />
             <DetailProductPage />
             <Footer />
+          </Route>
+          <Route path="/admin/" render={() => {
+            if (JSON.parse(localStorage.getItem("userData")) && (JSON.parse(localStorage.getItem("userData")).roleId === "R1" || JSON.parse(localStorage.getItem("userData")).roleId === "R4")) {
+              return <HomePageAdmin />
+            } else return <Redirect to={"/login"} />
+
+          }}>
           </Route>
           <ToastContainer
             position="top-right"
